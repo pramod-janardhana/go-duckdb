@@ -89,6 +89,12 @@ func ArrowTransformRequest(c *gin.Context) {
 		return
 	}
 
+	defer func() {
+		if err := arrowQB.Close(); err != nil {
+			log.Printf("Error closing arrow query builder, err: %v\n", err)
+		}
+	}()
+
 	if err := qb.CSVToTable(tableName, filePath); err != nil {
 		log.Printf("error loading data to duck-db, err: %v\n", err)
 		return

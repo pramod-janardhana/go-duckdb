@@ -35,3 +35,12 @@ var GRPC = serviceConfig{
 	DuckDBDir:   "/Users/pramodj/Documents/Projects/github/pramod-janardhana/go-duckdb/duckdb",
 	ChunkSize:   50000,
 }
+
+var GRPC_ARROW = serviceConfig{
+	Host:        "localhost",
+	Port:        9003,
+	DatasetPath: "/Users/pramodj/Documents/Projects/github/pramod-janardhana/go-duckdb/dataset/10M.csv",
+	ProfDir:     "/Users/pramodj/Documents/Projects/github/pramod-janardhana/go-duckdb/prof/arrow",
+	DuckDBDir:   "/Users/pramodj/Documents/Projects/github/pramod-janardhana/go-duckdb/duckdb",
+	ChunkSize:   100000,
+}
