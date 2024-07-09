@@ -7,6 +7,8 @@
 
 /dataset
 /prof
+/duckdb
+/temp
 
 # User-specific stuff
 .idea/**/workspace.xml
